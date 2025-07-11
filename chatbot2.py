@@ -31,14 +31,14 @@ dataset="""Document content:
 질문: 맞춤법 검사 기능을 사용할 수 있나요? 답변: 각 섹션의 다양한 텍스트 설명 필드에 대해 맞춤법 클릭 기능을 사용할 수 있습니다. 맞춤법 검사 기능을 사용하려면 사전을 클릭하세요.
 """
 
-if "assistant_id" not in st.sessston_state :
+if "assistant_id" not in st.sessstion_state :
     assistant = client.beta.assistants.create(
     name="Fruit Advisor",
     instructions="너는 과일 지식이 풍부한 과일 전문가야. 내 질문에 친절히 답변 해주는 챗봇이야",
     model=Model
 )
 
-if "chat_history" not in st.sessston_state :
+if "chat_history" not in st.sessstion_state :
     st.session_state.chat_history= []
 
 st.title("콜센터 도우미 Chatbot")
